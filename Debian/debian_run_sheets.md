@@ -136,8 +136,12 @@ Review and compare the `/etc/apt/sources.list` file with official Debian reposit
    ```bash
    deb http://deb.debian.org/debian/ bullseye main
    deb-src http://deb.debian.org/debian/ bullseye main
+
    deb http://security.debian.org/debian-security/ bullseye/updates main
    deb-src http://security.debian.org/debian-security/ bullseye/updates main
+
+   deb http://deb.debian.org/debian bullseye-updates main
+   deb-src http://deb.debian.org/debian bullseye-updates main
    ```
 
 Then, import the Debian GPG key:
@@ -150,7 +154,12 @@ Update the system packages and software to patch known vulnerabilities:
 
    ```bash
    sudo apt update
-   sudo apt upgrade
+
+   sudo apt upgrade --without-new-pkgs
+
+   sudo apt full-upgrade
+
+   reboot
    ```
 
 ## 13. Test Firewall and System
