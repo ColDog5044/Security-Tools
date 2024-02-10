@@ -1,6 +1,6 @@
-# OpenVAS Documentation
+# OpenVAS Documentation (This Documentation is out-of-date. Use the Docker method instead.)
 
-# Install - Debian
+## Install - Debian
 
 ```bash
 sudo add-apt-repository ppa:mrazavi/openvas
