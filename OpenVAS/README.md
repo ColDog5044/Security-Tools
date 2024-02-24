@@ -1,5 +1,7 @@
 # OpenVAS Documentation (This Documentation is out-of-date. Use the Docker method instead.)
 
+# *NOTE: I was able to get OpenVas working with Docker*
+
 ## Install - Debian
 
 ```bash
