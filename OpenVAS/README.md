@@ -1,15 +1,13 @@
-# OpenVAS Documentation (This Documentation is out-of-date. Use the Docker method instead.)
+# OpenVAS Documentation 
 
-# *NOTE: I was able to get OpenVas working with Docker*
-
-## Install - Debian
+## Install - Docker
 
 ```bash
-sudo add-apt-repository ppa:mrazavi/openvas
-sudo apt-get update
-sudo apt-get install -y sqlite3
-sudo apt-get install -y openvas9
-sudo service openvas-manager restart
+sudo apt update
+
+sudo apt install docker.io
+
+sudo docker run -d -p 443:443 --name openvas mikesplain/openvas
 ```
 
 ## Create a Scan
