@@ -74,8 +74,16 @@ Configure a basic `iptables` firewall to restrict incoming and outgoing traffic,
    ### Allow specific ports (any hosted service port, HTTP on port 80, and HTTPS on port 443)
    
    ```bash
-   iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-   iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+   iptables -A INPUT -p tcp --dport 80 -j ACCEPT # HTTP
+   iptables -A INPUT -p tcp --dport 443 -j ACCEPT # HTTPS
+   iptables -A INPUT -p tcp --dport 53 -j ACCEPT # DNS
+   iptables -A INPUT -p tcp --dport 123 -j ACCEPT # NTP
+   ```
+
+   ### Log Dropped Packets
+
+   ```bash
+   iptables -A INPUT -j LOG --log-prefix 'Dropped: '
    ```
 
    ### Save iptables rules
